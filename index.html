@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6ª Avaliação da Disciplina PFEI - Trabalho de JavaScript</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>6ª Avaliação da Disciplina PFEI - Trabalho de JavaScript</h1>
+    
+    <div class="objetivo">
+        <strong>Objetivo:</strong> Implemente as funcionalidades de "Limpar Lista" e "Ordenar Lista"
+    </div>
+    
+    <div class="area-entrada">
+        <input type="text" id="inputTarefa" placeholder="Digite uma nova tarefa...">
+        <button class="btnListaTarefas" cid="botaoAdicionar" onclick="adicionarLista()">Adicionar</button>
+    </div>
+    
+    <div class="divTarefas">
+        <strong>Lista de Tarefas:</strong>
+        <ul id="listaTarefas">
+        <!-- As tarefas aparecerão aqui -->
+        </ul> 
+        <div class="divBtn">
+                <button class="btnListaTarefas">Limpar Lista</button>
+                <button class="btnListaTarefas">Ordenar Lista</button>
+        </div>
+    </div>
+        
+    <div class="dica">
+        <strong>Faça as seguintes alterações no código:</strong><br>
+        <ol>
+            <li>Crie e codifique 2(duas) novas funções <em>limparLista() e ordenarLista()</em> no arquivo script.js;</li>
+            <li>Inclua os eventos <em>"onclick"</em> nos botões "Limpar Lista" e "Ordenar Lista" chamando as respectivas funções;</li>
+            <li>O processo de "Adicionar Tarefa" deverá fazer o seguinte tratamento: </li>
+                <ul>
+                    <li>Não permitir inclusão de tarefa repetida;</li>
+                    <li>Retirar os espaços nas extremidades da tarefa adicionada;</li>
+                    <li>Colocar as tarefas em letra maiúscula;</li>
+                    <li>Limpar o campo após a inclusão da tarefa;</li>
+                </ul>
+            <li>Utilize o array "tarefas" presente no script;</li>
+            <li>Altere o estilo (cores, fonte etc) para dar personalidade ao seu trabalho.</li>    
+            <li>Altere o título e retire esta seção após a finalização do trabalho</li>
+        </ol>
+        <strong>Dicas:</strong><br>
+        <ul>
+            <li>Utilize os métodos da classe String e Array</li>
+            <li>Utilize as funções DOM de criação e exclusão de elementos html</li>
+            
+        </ul>
+    </div> 
+
+</body>
+</html>
