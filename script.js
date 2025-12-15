@@ -46,6 +46,16 @@ function incluirTarefaLista(textoTarefa){
 
 }
 
+function limparLista (){
+    document.getElementById("btnLimparLista");
+}
+
+
+function ordenarLista(){
+    document.getElementById("btnOrdenarLista");
+}
+
+
 function excluirTarefa(tarefa){
     const tarefaClicada = tarefa.closest("li");
     textoTarefa=tarefaClicada.textContent.trim();
@@ -53,3 +63,6 @@ function excluirTarefa(tarefa){
     tarefaClicada.remove();
 }
 
+
+
+trimEnd

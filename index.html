@@ -8,15 +8,12 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>6ª Avaliação da Disciplina PFEI - Trabalho de JavaScript</h1>
+    <h1>📜lista de tarefas - gabriel ferreira📜 </h1>
     
-    <div class="objetivo">
-        <strong>Objetivo:</strong> Implemente as funcionalidades de "Limpar Lista" e "Ordenar Lista"
-    </div>
     
     <div class="area-entrada">
-        <input type="text" id="inputTarefa" placeholder="Digite uma nova tarefa...">
-        <button class="btnListaTarefas" cid="botaoAdicionar" onclick="adicionarLista()">Adicionar</button>
+        <input type="text" id="inputTarefa" placeholder="O que precisa fazer hoje?">
+        <button class="btnListaTarefas" cid="botaoAdicionar" onclick="adicionarLista()">adicionar</button>
     </div>
     
     <div class="divTarefas">
@@ -25,8 +22,8 @@
         <!-- As tarefas aparecerão aqui -->
         </ul> 
         <div class="divBtn">
-                <button class="btnListaTarefas">Limpar Lista</button>
-                <button class="btnListaTarefas">Ordenar Lista</button>
+                <button class="btnListaTarefas" id="btnLimparLista"  onclick="LimparLista()">limpar lista</button>
+                <button class="btnListaTarefas" id="btnOrdenarLista" onclick="OrdenarLista()">ordenar lista</button>
         </div>
     </div>
         
