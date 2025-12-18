@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6ª Avaliação da Disciplina PFEI - Trabalho de JavaScript</title>
+    <title>Lista de tarefas</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="script.js"></script>
 </head>
 <body>
@@ -13,7 +14,7 @@
     
     <div class="area-entrada">
         <input type="text" id="inputTarefa" placeholder="O que precisa fazer hoje?">
-        <button class="btnListaTarefas" cid="botaoAdicionar" onclick="adicionarLista()">adicionar</button>
+        <button class="btnListaTarefas" cid="botaoAdicionar" onclick="adicionarLista()" title="Adiciona uma tarefa na lista">adicionar</button>
     </div>
     
     <div class="divTarefas">
@@ -22,34 +23,11 @@
         <!-- As tarefas aparecerão aqui -->
         </ul> 
         <div class="divBtn">
-                <button class="btnListaTarefas" id="btnLimparLista"  onclick="LimparLista()">limpar lista</button>
-                <button class="btnListaTarefas" id="btnOrdenarLista" onclick="OrdenarLista()">ordenar lista</button>
+                <button class="btnListaTarefas" id="BtnLimparLista"  onclick="LimparLista()" title="Apaga todas as tarefas">limpar lista</button>
+                <button class="btnListaTarefas" id="btnOrdenarLista" onclick="ordenarLista()" title="Ordena a lista em ordem alfabética">ordenar lista</button>
         </div>
     </div>
-        
-    <div class="dica">
-        <strong>Faça as seguintes alterações no código:</strong><br>
-        <ol>
-            <li>Crie e codifique 2(duas) novas funções <em>limparLista() e ordenarLista()</em> no arquivo script.js;</li>
-            <li>Inclua os eventos <em>"onclick"</em> nos botões "Limpar Lista" e "Ordenar Lista" chamando as respectivas funções;</li>
-            <li>O processo de "Adicionar Tarefa" deverá fazer o seguinte tratamento: </li>
-                <ul>
-                    <li>Não permitir inclusão de tarefa repetida;</li>
-                    <li>Retirar os espaços nas extremidades da tarefa adicionada;</li>
-                    <li>Colocar as tarefas em letra maiúscula;</li>
-                    <li>Limpar o campo após a inclusão da tarefa;</li>
-                </ul>
-            <li>Utilize o array "tarefas" presente no script;</li>
-            <li>Altere o estilo (cores, fonte etc) para dar personalidade ao seu trabalho.</li>    
-            <li>Altere o título e retire esta seção após a finalização do trabalho</li>
-        </ol>
-        <strong>Dicas:</strong><br>
-        <ul>
-            <li>Utilize os métodos da classe String e Array</li>
-            <li>Utilize as funções DOM de criação e exclusão de elementos html</li>
-            
         </ul>
-    </div> 
 
 </body>
 </html>

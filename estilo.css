@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    color: #ffffff;
+    color: #3943ae;
     font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
@@ -60,27 +60,24 @@ h1 {
     background-color: #f9f9f9;
     padding: 15px;
     margin-bottom: 10px;
-    border: 1px solid #e0e0e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+li.item-tarefa {
+    list-style: upper-roman;
+    background-color: lch(90.14% 42.53 89.48);
+}
+
       
 .divLixeira {
     display: flex;
     gap: 5px;
 }
-   
-.dica {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e8f4f8;
-    border: 1px solid #b8d4db;
-}
 
 .divTarefas{
     background-color: lch(90.14% 42.53 89.48);
-    border: 3px solid #c6f3fe;
+    border: 3px solid #383838;
     border-radius: 20px;
     padding: 15px 15px;
     box-shadow: #333;

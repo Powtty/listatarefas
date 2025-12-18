@@ -4,27 +4,41 @@ let tarefas = [];
 function adicionarLista(){
     //Selecionando os elementos da página html input
     const campoTarefa = document.getElementById("inputTarefa");
-    let textoTarefa = campoTarefa.value;
+    let textoTarefa = campoTarefa.value.trim();
 
-    //Limpando e colocando em maíusculas   
-    // ***** Inclua o comando para tratar o texto aqui 
-    
-    //Verifique se a tarefa já foi criada!!!
+    //Limpando e colocando em maiúsculas
+    textoTarefa = textoTarefa.toUpperCase();
+
+    //Não permitir tarefa vazia
+    if (textoTarefa === "") {
+        alert("Digite uma tarefa!");
+        return;
+    }
+
+  //Não permitir tarefa repetida
+if (tarefas.includes(textoTarefa)) {
+    const mensagens = [
+        "Ué? Já anotei isso aí.",
+        "essa tarefa já está na lista.",
+        "repito, já está na lista", 
+        "...",
+        "escreva outra tarefa, essa já foi adicionada"
+    ];
+    alert(mensagens[Math.floor(Math.random() * mensagens.length)]);
+    campoTarefa.value = "";
+    return;
+}
     //Adicionando no array tarefas
     tarefas.push(textoTarefa);
     
-    
     //Chamando a função incluir tarefa
-    incluirTarefaLista(textoTarefa)
+    incluirTarefaLista(textoTarefa);
        
     //Limpando o campo de entrada da Tarefa após a inclusão na lista
-    // ***** Inclua o comando para limpar o campo aqui
-    
-   
+    campoTarefa.value = '';
 }
 
 function incluirTarefaLista(textoTarefa){
-
     //Selecionando os elementos da página html input e lista
     const listaTarefas = document.getElementById("listaTarefas");
     
@@ -42,27 +56,31 @@ function incluirTarefaLista(textoTarefa){
         <span>${textoTarefa}</span>
         <div class="divLixeira">
             <img class="btnLixeira" onclick="excluirTarefa(this)" src="lixeira.png">
-        </div>`
-
+        </div>`;
 }
 
-function limparLista (){
-    document.getElementById("btnLimparLista");
+function LimparLista(){
+    tarefas = [];
+    const limparTarefa = document.getElementById("listaTarefas");
+    limparTarefa.innerHTML = '';
 }
-
 
 function ordenarLista(){
-    document.getElementById("btnOrdenarLista");
+    tarefas.sort(); 
+
+    const lista = document.getElementById("listaTarefas");
+    lista.innerHTML = "";
+    
+    tarefas.forEach(t => incluirTarefaLista(t));
 }
 
+function excluirTarefa(botao){
+    const li = botao.closest("li");
+    const textoTarefa = li.querySelector("span").textContent.trim();
 
-function excluirTarefa(tarefa){
-    const tarefaClicada = tarefa.closest("li");
-    textoTarefa=tarefaClicada.textContent.trim();
-    tarefas = tarefas.filter(tarefa => tarefa != textoTarefa);
-    tarefaClicada.remove();
+    //Remove do array
+    tarefas = tarefas.filter(t => t !== textoTarefa);
+
+    //Remove da tela
+    li.remove();
 }
-
-
-
-trimEnd
